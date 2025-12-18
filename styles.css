@@ -12,7 +12,11 @@ body {
     "Segoe UI", sans-serif;
   background:
     linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.78)),
-    url("background.jpg") center/cover fixed no-repeat;
+    url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   color: #f5f7fb;
 }
 
@@ -669,9 +673,14 @@ main {
 
   /* On phones, lighten overlay more so background image is visible */
   body {
+    /* On phones, show more of the image by scaling it down with contain */
     background:
       linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.65)),
-      url("background.jpg") center/cover fixed no-repeat;
+      url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-attachment: scroll;
   }
 
   .card,
@@ -700,6 +709,5 @@ main {
     padding-inline: 1.2rem;
   }
 }
-
 
 
